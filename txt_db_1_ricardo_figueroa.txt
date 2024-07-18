@@ -1,0 +1,32 @@
+He configurado y creado una base de datos llamada `byteBuild` siguiendo una serie de pasos estructurados. 
+
+### Configuración Inicial
+Primero, se configuró el acceso del usuario de base de datos, asegurando la correcta autenticación y estableciendo la zona horaria global a `-6:00`.
+
+### Información del Proyecto
+Este proyecto fue desarrollado por Ricardo Figueroa, con fecha de creación el 11/04/2024 y última edición el 26/04/2024. La base de datos `byteBuild` es totalmente funcional e incluye las entidades `cliente`, `proveedor`, `producto`, `carritoCompras`, `soporteTecnico`, `compra`, y `factura`.
+
+### Creación y Configuración de la Base de Datos
+Para evitar conflictos con bases de datos existentes, se eliminó cualquier base de datos preexistente con el mismo nombre y se creó una nueva base de datos llamada `byteBuild`.
+
+### Creación de Tablas
+Se diseñaron y crearon varias tablas esenciales para el proyecto:
+- **Tabla cliente:** Esta tabla almacena información sobre los clientes, incluyendo ID, nombre, dirección, teléfono y correo electrónico.
+- **Tabla proveedor:** Contiene información sobre los proveedores, similar a la tabla de clientes.
+- **Tabla producto:** Almacena detalles de los productos, como nombre, descripción, precio y stock.
+- **Tabla carritoCompras:** Registra los productos agregados al carrito de compras, incluyendo cantidad, nombre del producto, precio y total.
+- **Tabla soporteTecnico:** Almacena información sobre problemas técnicos reportados, incluyendo número de teléfono, correo electrónico, descripción del problema y fecha del problema.
+- **Tabla compra:** Registra las compras realizadas, incluyendo ID del cliente, ID del proveedor, fecha de compra y total de la compra. Esta tabla también establece relaciones con las tablas `cliente` y `proveedor`.
+- **Tabla factura:** Contiene los registros de facturación, incluyendo ID de la compra, fecha de la factura y monto.
+
+### Inserción de Datos
+Se insertaron datos iniciales en todas las tablas para simular un entorno de trabajo real:
+- En la tabla `cliente`, se añadieron cinco registros con nombres, direcciones, teléfonos y correos electrónicos ficticios.
+- La tabla `proveedor` también recibió cinco registros con información de proveedores ficticios.
+- En la tabla `producto`, se insertaron cinco productos con sus descripciones, precios y cantidades en stock.
+- La tabla `carritoCompras` fue poblada con registros que simulan la adición de productos al carrito de compras, incluyendo cantidades y precios.
+- En la tabla `soporteTecnico`, se añadieron registros que describen problemas técnicos reportados por los clientes, con fechas específicas.
+- La tabla `compra` fue llenada con registros de compras realizadas, enlazando clientes y proveedores con fechas y montos específicos.
+- Finalmente, en la tabla `factura`, se insertaron registros de facturación correspondientes a las compras realizadas.
+
+Este proceso detallado asegura que la base de datos `byteBuild` esté completamente funcional y lista para su uso en el proyecto.
