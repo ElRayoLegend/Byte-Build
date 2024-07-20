@@ -1,0 +1,5 @@
+Realize un cambio en base de datos, en el procedimiento:
+INSERT INTO Factura,
+borrando los últimos datos insertados, por que comprometían el funcionamiento de la base de datos.
+
+cree el diagrama entidad relación de la base de datos.

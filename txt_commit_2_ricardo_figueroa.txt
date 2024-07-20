@@ -1,0 +1,5 @@
+Arregle la base de dato:
+1. quite las relaciones.
+2. cambie el nombre de las entidades, el formato anterior era "compras", y lo volví "Compras"
+
+todos estos cambios los realize a petición de mi SCRUM MASTER.
