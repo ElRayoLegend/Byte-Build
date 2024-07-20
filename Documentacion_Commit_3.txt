@@ -1,0 +1,9 @@
+En el commit numero 3
+-Se agregaron la parte del Servicio y el Servlet de Compra
+incluyendo Tambien la interfaz de Servicio.
+
+Todo el material basandonos en la parte Backend de una web App
+con la respectiva documentación en cada método y función.
+
+Lo que nos da el soporte y estructura necesaria para que la parte
+lógica del proyecto funcione en el Area de Compras.
