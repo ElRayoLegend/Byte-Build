@@ -1,0 +1,1 @@
+Realicé varios arreglos en el código, mejorando la funcionalidad y corrigiendo errores identificados. Sin embargo, aún no está terminado ya que falta pulir varios detalles y hacer algunas optimizaciones adicionales.
