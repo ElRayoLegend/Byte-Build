@@ -1,0 +1,1 @@
+En este commit pulí varios detalles y realicé optimizaciones adicionales. Sin embargo, aún no está completo, ya que algunas funcionalidades no funcionan correctamente y todavía hay aspectos que necesitan ser mejorados.
