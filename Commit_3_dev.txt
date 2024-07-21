@@ -1,0 +1,1 @@
+En este commit se añadieron ya las clases de Josue Garcia y Adrian Morataya. Ademas de que ya esta listo el pom, el context y JPA. Aun falta que otros 3 backend suban sus clases y lo que se les encargo.
