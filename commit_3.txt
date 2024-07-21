@@ -1,0 +1,1 @@
+Mis clases, contextos y mi parte del programa ya están finalizados. Ahora el frontend puede trabajar sobre esta base sin problemas.
