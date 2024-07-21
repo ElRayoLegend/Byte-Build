@@ -1,6 +1,9 @@
-# Hola Banda
+# Para los de Front-End y el SCRUM Master
 
-Hola banda, ¿cómo están?
----
+> *El contenido de este README.md es temporal; no ha sido aprobado por el SCRUM Master aún y está sujeto a cambios. Cualquier duda, consulta, amenaza de muerte... va dirigida al SCRUM Master.*
 
-![Bienvenidos a mi Rama](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb291ZnRpMWUycGw5aWxuN3hiM3IwZmdvYjN6enQ1bnpjdGptbnY2biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CNAhQuDceLwwo/giphy.gif)
+Acá les dejo el index con la estructura de folders que usaremos los de front-end para trabajar. Voy a tratar de ser lo más conciso posible y dejar el index lo mejor documentado posible. Cualquier duda, preguntarle al SCRUM Master para que me ~~nalguee~~ informe de como solucionarlo. Si quieren, me preguntan una que otra cosa a mí, pero ahí se los dejo.
+
+Para empezar a trabajar nuestro hermoso front-end empieza por insertar los siguientes comandos en tu terminal (de preferencia, Git Bash porque tiene mejor soporte y te dice en qué rama estás): `git clone https://github.com/ElRayoLegend/Byte-Build.git`, `git checkout paulo2023238` (me enteré que Git ya te clona *TODAS* las ramas por defecto, pero no las muestra hasta que te cambias a ellas). Luego copia los archivos de mi rama, copia y pega este comando `git checkout <reemplazar-con-tu-rama>`.
+
+Yo ya generé los jsp. Solo tienen que trabajar el suyo y, en el caso de un par, ponerse de acuerdo para que los dos trabajen su respectiva parte de un JSP (por ejemplo, uno se pone a hacer la página de tienda (productos; listar por defecto) y otro la de agregar que está en el mismo .jsp).
