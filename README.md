@@ -29,6 +29,38 @@ ponerse de acuerdo para que los dos trabajen su respectiva parte de un JSP (por
 ejemplo, uno se pone a hacer la página de tienda (productos; listar por defecto) 
 y otro la de agregar que está en el mismo .jsp).
 
+## Estructura del Sitio:
+
+El sitio tendrá una barra de navegación donde estarán los menús principales. 
+Cualquier menú secundario será accedido dentro del menú principal al que se 
+asocia.
+
+Por ejemplo: El carrito, se accede desde la barra de navegación; pero la factura y
+las compras, se acceden desde carrito.
+
+Todo eso se verá marcado dentro de la siguiente lista donde, el nivel, explica 
+desde donde se accede.
+
+La barra de menú se debe poder acceder desde todos los menús. Los que tengan que
+hacer un menú por el que se accede a otro, crean un botón para acceder a él.
+
+Por ejemplo: En Productos, puede haber un botón de "Agregar Producto" y, por ahí,
+se accede al formulario para agregar un producto (de preferencia que esté arriba
+para mejor experiencia de usuario).
+
+- Barra de Navegación:
+  - Index
+  - Productos
+    - Agregar Producto
+      - Agregar Proveedor
+      - Listar Proveedor
+  - Carrito
+    - Factura
+    - Compras
+  - Clientes
+    - Agregar Cliente
+  - Soporte Técnico
+
 ---
 
 ## NOTA IMPORTANTE

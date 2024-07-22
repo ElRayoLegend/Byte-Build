@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vender - BYTE & Build</title>
+    <title>Sporte Técnico - BYTE & Build</title>
     <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/assets/brand/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -25,8 +25,8 @@
         <div class="collapse navbar-collapse" id="navbarByteAndBuild">
             <div class="navbar-nav">
                 <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">Inicio</a>
-                <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/page/listar-producto.jsp">Tienda</a>
-                <a class="nav-link" href="${pageContext.request.contextPath}/page/ayuda/soporte-tecnico.jsp">Soporte Técnico</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/page/listar-producto.jsp">Tienda</a>
+                <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/page/ayuda/soporte-tecnico.jsp">Soporte Técnico</a>
             </div>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="${pageContext.request.contextPath}/page/tienda/carro.jsp">
