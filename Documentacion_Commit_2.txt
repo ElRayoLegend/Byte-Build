@@ -1,0 +1,7 @@
+******************************************************
+Se creó la interfaz IClienteService con el crud de clientes.
+
+Se creó la clase ClienteService implementando los métodos
+abstractos de la interfaz, se crearon las funciones de crear,
+listar, buscar, editar y eliminar.
+******************************************************
