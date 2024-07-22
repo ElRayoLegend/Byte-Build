@@ -1,10 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <!--Asegúrate de tener ESTO MISMO en tu <head>. Si no, nada funcionará-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTE & Build</title>
+    <title>Productos - BYTE & Build</title>
     <link rel="icon" type="image/png" href="assets/brand/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -14,6 +13,7 @@
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+
 
 
 <!--Script pa' que se vea bonito UwU-->
