@@ -1,0 +1,6 @@
+******************************************************
+Se creó la clase modelo de Cliente, contiene los 
+atributos clienteId, nombre, direccion, telefono
+y correo. Contiene getters, setters, contructur vacío,
+constructor lleno y sobrecarga de método toString.
+******************************************************
