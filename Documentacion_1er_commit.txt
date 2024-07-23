@@ -1,0 +1,1 @@
+En el primer commit, se realizaron la creación de los beans o modelos de referencia para la transacción de datos de la entidad proveedor.
