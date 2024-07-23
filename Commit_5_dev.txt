@@ -1,0 +1,3 @@
+En este commit se editaron aspectos en la base de datos y se añadieron:
+Model Producto, Producto Servlet, Producto Service y IProductoService.
+Además de eliminar paquetes que no eran de utilidad en el proyecto Byte And Build.

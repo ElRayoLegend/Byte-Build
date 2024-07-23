@@ -44,10 +44,10 @@ CREATE TABLE Proveedor (
 -- Tabla Producto
 CREATE TABLE Producto (
     productoId INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    descripcion VARCHAR(255) NOT NULL,
-    precio DECIMAL(10,2) NOT NULL,
-    stock INT NOT NULL,
+    nombreProducto VARCHAR(100) NOT NULL,
+    marca VARCHAR(255) NOT NULL,
+    descripcionProducto VARCHAR(255) NOT NULL,
+    precioProducto DECIMAL(10,2) NOT NULL,
     PRIMARY KEY (productoId)
 );
 
@@ -108,12 +108,12 @@ INSERT INTO Proveedor (nombre, direccion, telefono, correo) VALUES
 ('Proveedor E', 'Boulevard 5', '32198765', 'proveedore@example.com');
 
 -- Datos en la tabla Producto
-INSERT INTO Producto (nombre, descripcion, precio, stock) VALUES
-('Producto 1', 'Descripcion del Producto 1', 10.50, 100),
-('Producto 2', 'Descripcion del Producto 2', 20.75, 50),
-('Producto 3', 'Descripcion del Producto 3', 15.30, 200),
-('Producto 4', 'Descripcion del Producto 4', 25.00, 150),
-('Producto 5', 'Descripcion del Producto 5', 30.10, 75);
+INSERT INTO Producto (nombreProducto, marca, descripcionProducto, precioProducto) VALUES
+('Producto 1', 'Marca1', 'Descripcion del Producto 1', 10.50),
+('Producto 2', 'Marca2', 'Descripcion del Producto 2', 20.75),
+('Producto 3', 'Marca3', 'Descripcion del Producto 3', 15.30),
+('Producto 4', 'Marca4', 'Descripcion del Producto 4', 25.00),
+('Producto 5', 'Marca5', 'Descripcion del Producto 5', 30.10);
 
 -- Datos en la tabla CarritoCompras
 INSERT INTO CarritoCompras (cantidad, nombreProducto, precioProducto, total) VALUES
