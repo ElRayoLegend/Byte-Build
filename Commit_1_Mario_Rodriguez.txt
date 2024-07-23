@@ -1,0 +1,93 @@
+Realización y creacion del pom.xml del Proyecto ByteAndBuild
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.byteandbuild</groupId>
+    <artifactId>ByteAndBuild</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>ByteAndBuild</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakartaee>10.0.0</jakartaee>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat9-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <username>root</username>
+                    <password>Admin</password>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
+
+tales como jakartaee-api, hibernate-6.1.0, connector jdbc 8.0.12.
+Se le agrega la persistencia 3.0 para que el proyecto pueda conectarse correctamente  la base de datos.
+También utilizamos Jakarta.servlet.jsp.jstl para los jsp.
+Tambien agregamos los plugins para maven version 3.8.1
+Usando la version 11 de java.
+
+groupId: El mismo grupo de plugins de Apache Maven.
+artifactId: Identificador del plugin WAR
+de Maven, que se utiliza para construir archivos WAR (Web Application Archive).
+
+groupId: El grupo de plugins de Apache Tomcat para Maven.
+artifactId: Identificador del plugin específico para Tomcat 9.
+
+
+
