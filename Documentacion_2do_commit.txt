@@ -1,0 +1,1 @@
+En el segundo commit, se realizaron los servicios relacionados a la entidad proveedores, con fin de poder hacer una relación entre la pagina web y el sistema de gestión de base de datos.
