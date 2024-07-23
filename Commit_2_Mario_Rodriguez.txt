@@ -1,0 +1,12 @@
+En este commit arregle y mejore varios detalles.
+
+Creamos el JPA el cual contendra 
+EntityManagerFactory emf = buildEntityManagerFactory();
+El entityManager que nos sirve para conectarnos con el 
+Hibernate y la persistencia, que a la vez crea la persistencia
+del EntityManager.
+
+
+Cree el modelo de la entidad Factura con sus respectivas 
+variables encapsuladas, setters and getters, los constructores
+y el toString.
