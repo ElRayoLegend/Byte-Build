@@ -1,0 +1,1 @@
+En el tercer commit, se realizaron se los servlet que son una parte fundamental de la arquitectura de aplicaciones web Java, proporcionando una forma eficiente y robusta de manejar la lógica del servidor y la interacción con el cliente.
