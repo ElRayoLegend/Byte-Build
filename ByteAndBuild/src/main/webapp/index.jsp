@@ -51,8 +51,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(28, 28, 30, 20%); /* Semi-transparent overlay */
-            backdrop-filter: blur(20px); /* Add blur effect here */
+            background-color: rgba(28, 28, 30, 40%); /* Semi-transparent overlay */
+            backdrop-filter: blur(5px); /* Add blur effect here */
             z-index: -1;
         }
         .content {
@@ -94,7 +94,7 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent bg-start">
         <div class="col-md-6 p-lg-5 mx-auto my-5">
             <h1 class="display-3 fw-bold">Construye la PC de tus Sueños</h1>
-            <h3 class="fw-normal text-muted mb-3">Encuentra el Mejor Hardware en BYTE & Build</h3>
+            <h3 class="fw-normal text-muted mb-3">Encuentra el Mejor Hardware en<br>BYTE & Build</h3>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>

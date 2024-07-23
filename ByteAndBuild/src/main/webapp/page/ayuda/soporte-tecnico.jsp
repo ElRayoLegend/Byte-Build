@@ -41,7 +41,7 @@
 </nav>
 
 <!--Tu Contenido Va Aquí-->
-
+<h1>Algo</h1>
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

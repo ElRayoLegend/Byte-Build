@@ -1,5 +1,12 @@
 # Para los de Front-End y el SCRUM Master
 
+**NOTA:** Este README.md no es el final. Todavía no he hecho el README del sitio
+web, y este README es para que los que vayan a mi rama sepan detalles sobre como
+estoy organizando el front-end (en algún punto tenía que empezar, ¿no?). En fin,
+el documento donde tengo los cambios de mi rama es [este](CAMBIOS.md) Por favor,
+no me crucifiquen tenía trabajo atrasado y el Wicho cerote no se ponía a 
+trabajar para consentir los sueños húmedos del Harol.
+
 > **Actualización:** Para los que no entiendan qué mierda hice acá, básicamente
 > Tengo **creados** los `.jsp`. Así que ya están para que cada quién empiece a 
 > trabajar. De preferencia, esperar al index para que empiecen y así tengan la
@@ -35,8 +42,8 @@ El sitio tendrá una barra de navegación donde estarán los menús principales.
 Cualquier menú secundario será accedido dentro del menú principal al que se 
 asocia.
 
-Por ejemplo: El carrito, se accede desde la barra de navegación; pero la factura y
-las compras, se acceden desde carrito.
+Por ejemplo: El carrito se accede desde la barra de navegación, pero la factura y
+las compras se acceden desde carrito.
 
 Todo eso se verá marcado dentro de la siguiente lista donde, el nivel, explica 
 desde donde se accede.
