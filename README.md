@@ -3,9 +3,11 @@
 **NOTA:** Este README.md no es el final. Todavía no he hecho el README del sitio
 web, y este README es para que los que vayan a mi rama sepan detalles sobre como
 estoy organizando el front-end (en algún punto tenía que empezar, ¿no?). En fin,
-el documento donde tengo los cambios de mi rama es [este](CAMBIOS.md) Por favor,
-no me crucifiquen tenía trabajo atrasado y el Wicho cerote no se ponía a 
-trabajar para consentir los sueños húmedos del Harol.
+el documento donde tengo los cambios de mi rama es [este](CAMBIOS.md).  
+Perdónenme por haberme atrasado; habríamos terminado el proyecto el sábado o
+domingo de no ser porque me tardé en empezar. Por favor, no me crucifiquen tenía
+trabajo atrasado y el Wicho cerote no se ponía a trabajar para consentir los 
+sueños húmedos del Harol.
 
 > **Actualización:** Para los que no entiendan qué mierda hice acá, básicamente
 > Tengo **creados** los `.jsp`. Así que ya están para que cada quién empiece a 

@@ -41,7 +41,26 @@
 </nav>
 
 <!--Tu Contenido Va Aquí-->
-<h1>Algo</h1>
+<div class="container mt-5 pt-5">
+    <h2>Crear Ticket de Soporte Técnico</h2>
+    <form action="${pageContext.request.contextPath}/CrearTicketServlet" method="post">
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="telefono" name="telefono" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción del Problema</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+        </div>
+        <input type="hidden" name="fecha" value="<%= new java.util.Date() %>">
+        <button type="submit" class="btn btn-primary">Crear Ticket</button>
+    </form>
+</div>
+
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
