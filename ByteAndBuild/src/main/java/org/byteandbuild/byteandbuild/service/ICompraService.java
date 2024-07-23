@@ -1,10 +1,10 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
- * Fecha Creacion: 19/7/24 Fecha Modificaciones: 20/7/24
+ * Fecha Creacion: 19/7/24 Fecha Modificaciones: 19/7/24
  */
-package org.byteandbuild.webapp.service;
+package org.byteandbuild.byteandbuild.service;
 
 import java.util.List;
-import org.byteandbuild.webapp.model.Compra;
+import org.byteandbuild.byteandbuild.model.Compra;
 
 
 public interface ICompraService {

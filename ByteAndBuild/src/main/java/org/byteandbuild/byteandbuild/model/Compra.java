@@ -1,7 +1,7 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
- * Fecha Creacion: 19/7/24 Fecha Modificaciones: 20/7/24
+ * Fecha Creacion: 19/7/24 Fecha Modificaciones: 19/7/24
  */
-package org.byteandbuild.webapp.model;
+package org.byteandbuild.byteandbuild.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

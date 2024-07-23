@@ -1,7 +1,7 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
- * Fecha Creacion: 19/7/24 Fecha Modificaciones: 20/7/24
+ * Fecha Creacion: 19/7/24 Fecha Modificaciones: 19/7/24
  */
-package org.byteandbuild.webapp.util;
+package org.byteandbuild.byteandbuild.util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -10,7 +10,7 @@ import jakarta.persistence.Persistence;
 // Creacion de la clase JPA el cual nos permite conectarnos con hibernate y la persistencia
 public class JpaUtil {
 
-    private static final EntityManagerFactory emf = buildEntityManagerFactory();
+    private static final EntityManagerFactory emf = buildEntityManagerFactory();    
 
     /**
      * Crea la instancia de EntityManagerFactory utilizando la unidad de
@@ -21,7 +21,7 @@ public class JpaUtil {
         try {
 
             // @return la instancia configurada de EntityManagerFactory
-            return Persistence.createEntityManagerFactory("byteBuild");
+            return Persistence.createEntityManagerFactory("CRUDVespertinaProductoDB");
 
         } catch (Throwable ex) {
 
@@ -42,4 +42,5 @@ public class JpaUtil {
         emf.close();
 
     }
+
 }
