@@ -59,10 +59,26 @@ al chambear en un proyecto.
 
 ## Commit: 6
 
-En este commit, oficialmente terminé lo mío.
+~~En este commit, oficialmente terminé lo mío.~~ Faltaba el README.md del proyecto
 
 - Terminado: [Index](ByteAndBuild/src/main/webapp/index.jsp). Ya tiene todo y
 funciona bien.
 - Terminado: [Soporte Técnico](ByteAndBuild/src/main/webapp/page/ayuda/soporte-tecnico.jsp) y
 listar (llamado [problemas](ByteAndBuild/src/main/webapp/page/ayuda/problemas.jsp)). 
 Ya todo está listo para funcionar con el código de Josué.
+
+---
+
+## Commit: 7 (Verdadero Final, Espero)
+
+Hoy sí ya terminé. Y antes de media noche (a la hora de escribir esto; me tomé
+casi 3 tazas de café hoy y me pongo más raro de lo usual cuando no duermo aiuda
+;-;). Y creyeron que no me daría tiempo, JAJAJAJAJAJAJAJAJAJA... ok ya paro :v
+
+# EL [README](README(final).md)
+
+Mi queridísimo SCRUM Master, solo ponga ese archivo en la rama `Developer` y quite
+el "(final)" del nombre del archivo. Espero no tengamos que hacer más; solo falta
+el video que me fumaré el Jueves ~~junto con todo lo de Química (Prof. Palacios,
+si lee esto, perdone que haya abusado de su amabilidad este bimestre después de
+haberle entregado todo la primera semana el bimestre anterior).~~

@@ -1,24 +1,14 @@
 # Para los de Front-End y el SCRUM Master
 
-**NOTA:** Este README.md no es el final. Todavía no he hecho el README del sitio
-web, y este README es para que los que vayan a mi rama sepan detalles sobre como
-estoy organizando el front-end (en algún punto tenía que empezar, ¿no?). En fin,
-el documento donde tengo los cambios de mi rama es [este](CAMBIOS.md).  
-Perdónenme por haberme atrasado; habríamos terminado el proyecto el sábado o
-domingo de no ser porque me tardé en empezar. Por favor, no me crucifiquen tenía
-trabajo atrasado y el Wicho cerote no se ponía a trabajar para consentir los 
-sueños húmedos del Harol.
+**NOTA:** Este README.md no es el del proyecto. Ya hice el README del proyecto y
+está [aquí](README(final).md); solo se acuerdan de cambiarle el nombre al pasarlo
+a `Developer`. Este README es para que los que vayan a mi rama sepan detalles 
+sobre como estoy organizando el front-end (en algún punto tenía que empezar, ¿no?). 
+En fin, el documento donde tengo los cambios de mi rama es [este](CAMBIOS.md).
 
-> **Actualización:** Para los que no entiendan qué mierda hice acá, básicamente
-> Tengo **creados** los `.jsp`. Así que ya están para que cada quién empiece a 
-> trabajar. De preferencia, esperar al index para que empiecen y así tengan la
-> estructura. Para más información, vayan a la `NOTA IMPORTANTE`.
-
-> *El contenido de este README.md es temporal; no ha sido aprobado por el SCRUM 
-> Master aún y está sujeto a cambios. Cualquier duda, consulta, amenaza de 
-> muerte... va dirigida al SCRUM Master.*
-
-Acá les dejo el index con la estructura de folders que usaremos los de 
+---
+*Lo dejé para los que lo quisieran revisar*
+> Acá les dejo el index con la estructura de folders que usaremos los de 
 front-end para trabajar. Voy a tratar de ser lo más conciso posible y dejar el 
 index lo mejor documentado posible. Cualquier duda, preguntarle al SCRUM Master 
 para que me ~~nalguee~~ informe de como solucionarlo. Si quieren, me preguntan 
@@ -33,10 +23,10 @@ por defecto, pero no las muestra hasta que te cambias a ellas). Luego copia los
 archivos de mi rama, copia y pega este comando 
 `git checkout <reemplazar-con-tu-rama>`.
 
-Yo ya generé los jsp. Solo tienen que trabajar el suyo y, en el caso de un par, 
+Yo ya generé los jsp. Solo tienen que trabajar el suyo. ~~y, en el caso de un par, 
 ponerse de acuerdo para que los dos trabajen su respectiva parte de un JSP (por 
 ejemplo, uno se pone a hacer la página de tienda (productos; listar por defecto) 
-y otro la de agregar que está en el mismo .jsp).
+y otro la de agregar que está en el mismo .jsp).~~
 
 ## Estructura del Sitio:
 
@@ -72,16 +62,16 @@ para mejor experiencia de usuario).
 
 ---
 
-## NOTA IMPORTANTE
-
-El proyecto de la rama `Developer` ya lo copié acá para que puedan ejecutar el
+> ~~## NOTA IMPORTANTE~~
+> 
+> ~~El proyecto de la rama `Developer` ya lo copié acá para que puedan ejecutar el
 proyecto y probar si les funciona o no. Ahora, en este commit, no he colocado el
-trabajo de los de back-end *aún*, así que hasta que haga eso, no podremos ver si
-lo nuestro funciona con lo de back-end. Pero de eso me encargaré yo... Bueno, 
-depende de qué tan jodido esté el problema.
+trabajo de los de back-end *(y no lo haré porque ya terminamos)*, así que hasta 
+que haga eso, no podremos ver si lo nuestro funciona con lo de back-end. Pero de
+eso me encargaré yo... Bueno, depende de qué tan jodido esté el problema.~~
 
 ### NOTA NO TAN IMPORTANTE
 
 No vayan a copiar esto porfa. Sé que el SCRUM Master pidió un TXT, pero el 
 README.md aparece primero sin tener que abrirlo. Esto solo es para medio 
-documentar lo poco que logré avanzar hoy.
+documentar lo poco que logré avanzar hace un par de días.
