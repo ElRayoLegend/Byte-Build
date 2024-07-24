@@ -42,38 +42,41 @@
 
 <!--Tu Contenido Va Aquí-->
 <div class="container mt-5 pt-5">
-    <h2>Listado de Tickets de Soporte Técnico</h2>
-    <a href="${pageContext.request.contextPath}/page/crear-ticket.jsp" class="btn btn-primary mb-3">Crear Nuevo Ticket</a>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Teléfono</th>
-            <th>Email</th>
-            <th>Descripción del Problema</th>
-            <th>Fecha</th>
-        </tr>
-        </thead>
-        <tbody>
-        <%
-            // Suponiendo que tienes una lista de tickets en un atributo de solicitud llamado "tickets"
-            List<Ticket> tickets = (List<Ticket>) request.getAttribute("tickets");
-            if (tickets != null) {
-                for (Ticket ticket : tickets) {
-        %>
-        <tr>
-            <td><%= ticket.getTelefono() %></td>
-            <td><%= ticket.getEmail() %></td>
-            <td><%= ticket.getDescripcion() %></td>
-            <td><%= ticket.getFecha() %></td>
-        </tr>
-        <%
-                }
-            }
-        %>
-        </tbody>
-    </table>
+    <div class="card shadow-sm rounded">
+        <div class="card-body">
+            <h2 class="card-title mb-4">Listado de Tickets de Soporte Técnico</h2>
+            <a href="${pageContext.request.contextPath}/page/ayuda/soporte-tecnico.jsp" class="btn btn-primary mb-3">Crear Nuevo Ticket</a>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Descripción del Problema</th>
+                    <th>Fecha</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    // Suponiendo que tienes una lista de tickets en un atributo de solicitud llamado "tickets"
+                    List<SoporteTecnico> problemas = (List<SoporteTecnico>) request.getAttribute("tickets");
+                    if (problemas != null) {
+                        for (SoporteTecnico problema : problemas) {
+                %>
+                <tr class="shadow-sm rounded">
+                    <td><%= problema.getNumeroTelefono() %></td>
+                    <td><%= problema.getCorreoElectronico() %></td>
+                    <td><%= problema.getDescripcionProblema() %></td>
+                    <td><%= problema.getFechaProblema() %></td>
+                </tr>
+                <%
+                        }
+                    }
+                %>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

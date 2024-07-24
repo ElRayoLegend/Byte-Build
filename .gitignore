@@ -1,2 +1,4 @@
-ByteAndBuild/.idea/*
+ByteAndBuild/.idea
 ByteAndBuild/target/*
+ByteAndBuild/src/main/java/*
+

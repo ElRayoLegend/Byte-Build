@@ -56,3 +56,13 @@ en este medio expreso mejor y de forma más clara mis ideas y forma de pensar
 al chambear en un proyecto.
 
 ---
+
+## Commit: 6
+
+En este commit, oficialmente terminé lo mío.
+
+- Terminado: [Index](ByteAndBuild/src/main/webapp/index.jsp). Ya tiene todo y
+funciona bien.
+- Terminado: [Soporte Técnico](ByteAndBuild/src/main/webapp/page/ayuda/soporte-tecnico.jsp) y
+listar (llamado [problemas](ByteAndBuild/src/main/webapp/page/ayuda/problemas.jsp)). 
+Ya todo está listo para funcionar con el código de Josué.

@@ -41,38 +41,7 @@
 </nav>
 
 <!--Tu Contenido Va Aquí-->
-<div class="container mt-5 pt-5">
-    <h2>Listado de Proveedores</h2>
-    <a href="${pageContext.request.contextPath}/page/agregar-proveedor.jsp" class="btn btn-primary mb-3">Agregar Nuevo Proveedor</a>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Dirección</th>
-            <th>Teléfono</th>
-            <th>Correo</th>
-        </tr>
-        </thead>
-        <tbody>
-        <%
-            // Suponiendo que tienes una lista de proveedores en un atributo de solicitud llamado "proveedores"
-            List<Proveedor> proveedores = (List<Proveedor>) request.getAttribute("proveedores");
-            if (proveedores != null) {
-                for (Proveedor proveedor : proveedores) {
-        %>
-        <tr>
-            <td><%= proveedor.getNombre() %></td>
-            <td><%= proveedor.getDireccion() %></td>
-            <td><%= proveedor.getTelefono() %></td>
-            <td><%= proveedor.getCorreo() %></td>
-        </tr>
-        <%
-                }
-            }
-        %>
-        </tbody>
-    </table>
-</div>
+
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

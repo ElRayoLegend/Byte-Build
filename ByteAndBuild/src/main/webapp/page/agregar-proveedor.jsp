@@ -41,28 +41,7 @@
 </nav>
 
 <!--Tu Contenido Va Aquí-->
-<div class="container mt-5 pt-5">
-    <h2>Agregar Proveedor</h2>
-    <form action="${pageContext.request.contextPath}/AgregarProveedorServlet" method="post">
-        <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
-        </div>
-        <div class="mb-3">
-            <label for="direccion" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" required>
-        </div>
-        <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="telefono" name="telefono" required>
-        </div>
-        <div class="mb-3">
-            <label for="correo" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="correo" name="correo" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Agregar Proveedor</button>
-    </form>
-</div>
+
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
