@@ -103,7 +103,7 @@
         </table>
     <!-- Contenedor del botón -->
         <div class="btn-container">
-            <a class="btn btn-add" href="page/agregar-producto.jsp" >Agregar Producto</a>
+            <a class="btn btn-add" href="agregar-producto.jsp" >Agregar Producto</a>
         </div>
     </div>
 

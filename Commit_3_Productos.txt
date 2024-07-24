@@ -1,0 +1,13 @@
+Se modifico la vista de Listar Productos, agregando:
+Style: estilo de la pagina.
+Contenedor Principal (<div class="container mt-5">):
+Tarjeta Personalizada (<div class="card card-custom p-4">):
+Cuerpo de la Tarjeta (<div class="card-body">):
+Título de la Tarjeta (<h3>): Título centrado "Agregar Producto".
+Formulario de Productos (<form>):
+Campo de Nombre del Producto: Input de texto con etiqueta.
+Campo de Marca: Input de texto con etiqueta.
+Campo de Descripción: Textarea con etiqueta.
+Campo de Precio: Input numérico con etiqueta.
+Botón de Envío: Botón personalizado con estilo Bootstrap.
+Enlace a Bootstrap JS:
