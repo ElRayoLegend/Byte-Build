@@ -47,7 +47,7 @@
             <div class="card shadow-sm rounded">
                 <div class="card-body">
                     <h2 class="card-title mb-4">Agregar Proveedor</h2>
-                    <form action="${pageContext.request.contextPath}/" method="post">
+                    <form action="${pageContext.request.contextPath}/proveedor-servlet/" method="post">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                             <label for="nombre">Nombre</label>
