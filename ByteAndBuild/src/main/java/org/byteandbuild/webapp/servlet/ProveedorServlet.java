@@ -1,4 +1,4 @@
-package org.fernandotomas.webapp.servlet;
+package org.byteandbuild.webapp.servlet;
 
 // Se importan las librerias de Persistencia, Los gestores Https y los modelos
 import jakarta.servlet.ServletException;
@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import org.fernandotomas.webapp.model.Proveedor;
-import org.fernandotomas.webapp.service.ProveedorService;
+import org.byteandbuild.webapp.model.Proveedor;
+import org.byteandbuild.webapp.service.ProveedorService;
 
 @WebServlet(name = "ProveedorServlet", value = {"/proveedor-servlet"})
 @MultipartConfig
@@ -36,12 +36,12 @@ public class ProveedorServlet extends HttpServlet {
     // Se crea la clase para ingresar los datos y generar las transacciones
     private void crearProveedor(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre = request.getParameter("nombre");
-        String descripcion = request.getParameter("descripcion");
-        double precio = Double.parseDouble(request.getParameter("precio"));
-        int stock = Integer.parseInt(request.getParameter("stock"));
+        String direccion = request.getParameter("direccion");
+        String telefono = request.getParameter("telefono");
+        String correo = request.getParameter("correo");
 
-        Proveedor proveedor = new Proveedor(nombre, descripcion, precio, stock);
-        productoService.crearProducto(proveedor);
+        Proveedor proveedor = new Proveedor(nombre, direccion, telefono, correo);
+        proveedorService.crearProveedor(proveedor);
 
         response.sendRedirect(request.getContextPath() + "/");
     }
@@ -52,7 +52,7 @@ public class ProveedorServlet extends HttpServlet {
         String pathInfo = request.getPathInfo();
 
         if (pathInfo == null || pathInfo.equals("/")) {
-            crearProducto(request, response);
+            crearProveedor(request, response);
         } else {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
         }
@@ -62,15 +62,15 @@ public class ProveedorServlet extends HttpServlet {
     private void editarProveedor(int proveedorId, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Proveedor proveedor = proveedorService.buscarProveedorId(proveedorId);
             if (proveedor != null) {
-                String nombre = request.getParameter("nombre");
-                String descripcion = request.getParameter("descripcion");
-                double precio = Double.parseDouble(request.getParameter("precio"));
-                int stock = Integer.parseInt(request.getParameter("stock"));
+                String nombre = req.getParameter("nombre");
+                String direccion = req.getParameter("direccion");
+                String telefono = req.getParameter("telefono");
+                String correo = req.getParameter("correo");
 
                 proveedor.setNombre(nombre);
-                proveedor.setDescripcion(descripcion);
-                proveedor.setPrecio(precio);
-                proveedor.setStock(stock);
+                proveedor.setDireccion(direccion);
+                proveedor.setTelefono(telefono);
+                proveedor.setCorreo(correo);
 
                 proveedorService.editarProveedor(proveedor);
 
@@ -89,7 +89,7 @@ public class ProveedorServlet extends HttpServlet {
             String[] pathParts = pathInfo.split("/");
             if (pathParts.length == 2) {
                 int proveedorId = Integer.parseInt(pathParts[1]);
-                editarProducto(productoId, req, resp);
+                editarProveedor(proveedorId, req, resp);
             } else {
                 resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
             }
@@ -99,9 +99,9 @@ public class ProveedorServlet extends HttpServlet {
     }
 
     // Se crea la clase para eliminar los datos y generar las transacciones
-    private void eliminarProducto(int proveedorId, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void eliminarProveedor(int proveedorId, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Proveedor proveedor = proveedorService.buscarProveedorId(proveedorId);
-        if (producto != null) {
+        if (proveedor != null) {
             proveedorService.eliminarProveedor(proveedorId);
             resp.sendRedirect(req.getContextPath() + "/proveedores/");
         } else {

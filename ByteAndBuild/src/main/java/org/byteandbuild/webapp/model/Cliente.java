@@ -31,8 +31,7 @@ public class Cliente {
     }
 
     //Constructor lleno
-    public Cliente(int clienteId, String nombre, String direccion, String telefono, String correo) {
-        this.clienteId = clienteId;
+    public Cliente(String nombre, String direccion, String telefono, String correo) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;

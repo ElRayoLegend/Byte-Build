@@ -1,8 +1,8 @@
-package org.fernandotomas.webapp.service;
+package org.byteandbuild.webapp.service;
 
 // Se importan las librerias a utilizar y los atributos del modelo
 import java.util.List;
-import org.fernandotomas.webapp.model.Proveedor;
+import org.byteandbuild.webapp.model.Proveedor;
 
 public interface IProveedorService {
 

@@ -1,12 +1,12 @@
-package org.fernandotomas.webapp.service;
+package org.byteandbuild.webapp.service;
 
 //Se importan las librerias de persistencias y las librerias de los modelos
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import java.util.List;
-import org.fernandotomas.webapp.model.Proveedor;
-import org.fernandotomas.webapp.util.JpaUtil;
+import org.byteandbuild.webapp.model.Proveedor;
+import org.byteandbuild.webapp.util.JpaUtil;
 
 // Se crea la clase implementando las interfaces que se usarán
 public class ProveedorService implements IProveedorService{
@@ -15,7 +15,7 @@ public class ProveedorService implements IProveedorService{
     private EntityManager em;
 
     // Se declara la variable como servicio
-    public ProductoService() {
+    public ProveedorService() {
         this.em = JpaUtil.getEntityManager();
     }
 
