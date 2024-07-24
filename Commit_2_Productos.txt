@@ -1,0 +1,10 @@
+Se modifico la vista de Listar Productos, agregando:
+Style: estilo de la pagina.
+Contenedor Principal (<div class="container mt-5">):
+Tabla Personalizada (<table class="table table-custom">):
+Encabezado de la Tabla (<thead>):
+Define las columnas de la tabla: ID, Nombre, Descripción, Marca y Precio.
+Cuerpo de la Tabla (<tbody>):
+Etiqueta JSP forEach: Itera sobre la lista de productos (${productos}), generando una fila (<tr>) por cada producto.
+Cada fila contiene celdas (<td>) para mostrar las propiedades de cada producto: ID, Nombre, Dsescripción, Marca y Precio.
+Enlace a Bootstrap JS:

@@ -42,6 +42,70 @@
 </nav>
 
 <!--Tu Contenido Va Aquí-->
+    <style>
+        /* Estilos personalizados para la tabla */
+        .table-custom {
+            background-color: #214CCE;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Estilos personalizados para las celdas de la tabla */
+        .table-custom th, .table-custom td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        /* Estilo para el encabezado de la tabla */
+        .table-custom thead th {
+            background-color: #214CCE;
+            color: white;
+        }
+        /* Estilos para el botón */
+        .btn-add {
+            background-color: #28a745;
+            color: white;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+        .btn-add:hover {
+            background-color: #218838;
+        }
+        /* Estilos para el contenedor del botón */
+        .btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <!-- Contenedor principal -->
+    <div class="container mt-5">
+        <!-- Tabla personalizada -->
+        <table class="table table-custom">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="producto" items="${productos}">
+                    <tr>
+                        <td>${producto.productoId}</td>
+                        <td>${producto.nombreProducto}</td>
+                        <td>${producto.descripcionProducto}</td>
+                        <td>${producto.marca}</td>
+                        <td>${producto.precioProducto}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    <!-- Contenedor del botón -->
+        <div class="btn-container">
+            <a class="btn btn-add" href="page/agregar-producto.jsp" >Agregar Producto</a>
+        </div>
+    </div>
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
