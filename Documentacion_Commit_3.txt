@@ -1,0 +1,6 @@
+******************************************************
+Se creó la clase clienteServLet, en donde se obtiene la información
+necesaria para poder utilizar los métodos del servicio
+
+Se corrigió un costructor del modelo cliente
+******************************************************
