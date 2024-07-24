@@ -1,15 +1,15 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
  * Fecha Creacion: 23/7/24 Fecha Modificaciones: 23/7/24
  */
-package org.byteandbuild.byteandbuild.service;
+package org.byteandbuild.webapp.service;
 
 // Importamos la persistencia que vamos a utilizar 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import java.util.List;
-import org.byteandbuild.byteandbuild.model.SoporteTecnico;
-import org.byteandbuild.byteandbuild.util.JpaUtil;
+import org.byteandbuild.webapp.model.SoporteTecnico;
+import org.byteandbuild.webapp.util.JpaUtil;
 
 
 public class SoporteTecnicoService implements ISoporteTecnicoService{

@@ -1,7 +1,7 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
  * Fecha Creacion: 23/7/24 Fecha Modificaciones: 23/7/24
  */
-package org.byteandbuild.byteandbuild.servlet;
+package org.byteandbuild.webapp.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import org.byteandbuild.byteandbuild.model.SoporteTecnico;
-import org.byteandbuild.byteandbuild.service.SoporteTecnicoService;
+import org.byteandbuild.webapp.model.SoporteTecnico;
+import org.byteandbuild.webapp.service.SoporteTecnicoService;
 
 // nombramos el nombre del servlet y luego definimos la URL
 @WebServlet(name = "SoporteTecnicoServlet", value = {"/soporteTecnico-servlet"})
@@ -177,3 +177,4 @@ public class SoporteTecnicoServlet extends HttpServlet {
     
     
 }
+

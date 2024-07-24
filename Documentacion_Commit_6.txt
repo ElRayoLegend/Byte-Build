@@ -1,0 +1,2 @@
+23/7/24
+Corrección de sintaxis y estructura del proyecto

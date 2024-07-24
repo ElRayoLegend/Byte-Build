@@ -1,15 +1,15 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
- * Fecha Creacion: 19/7/24 Fecha Modificaciones: 19/7/24
+ * Fecha Creacion: 19/7/24 Fecha Modificaciones: 20/7/24
  */
-package org.byteandbuild.byteandbuild.service;
+package org.byteandbuild.webapp.service;
 
 // Importamos la persistencia que vamos a utilizar 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import java.util.List;
-import org.byteandbuild.byteandbuild.util.JpaUtil;
-import org.byteandbuild.byteandbuild.model.Compra;
+import org.byteandbuild.webapp.util.JpaUtil;
+import org.byteandbuild.webapp.model.Compra;
 
 // Implementamos la interfaz en el servicio
 public class CompraService implements ICompraService {
@@ -19,11 +19,10 @@ public class CompraService implements ICompraService {
 
     // Le asignamos el valor del JpaUtil del entityManager a la variable em 
     public CompraService() {
-       // Está llamando a un método estático getEntityManager() de la clase JpaUtil
+        // EstÃ¡ llamando a un mÃ©todo estÃ¡tico getEntityManager() de la clase JpaUtil
         this.em = JpaUtil.getEntityManager();
     }
 
-    
     @Override
     public void crearCompra(Compra compra) {
         // Creamos transaction de la instancia EntityManager
@@ -61,6 +60,7 @@ public class CompraService implements ICompraService {
     public void editarCompra(Compra compra) {
         // merge nos sirve para actualizar compra
         em.merge(compra);
+        
     }
 
     @Override

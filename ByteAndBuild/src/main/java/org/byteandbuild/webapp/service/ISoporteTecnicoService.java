@@ -1,10 +1,10 @@
 /* Documentacion Nombre completo: Josue David Garcia Mendez Codigo Tecnico:IN5BV
  * Fecha Creacion: 23/7/24 Fecha Modificaciones: 23/7/24
  */
-package org.byteandbuild.byteandbuild.service;
+package org.byteandbuild.webapp.service;
 
 import java.util.List;
-import org.byteandbuild.byteandbuild.model.SoporteTecnico;
+import org.byteandbuild.webapp.model.SoporteTecnico;
 
 public interface ISoporteTecnicoService {
 
