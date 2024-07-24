@@ -1,0 +1,4 @@
+David Emanuel Morente González - 2023242
+
+Commit 1
+- En el primer commit lo que hice fue crear el diseño del carrito, se agregaron botones para indicar que se incrementa, decrementa la cantidad y que se eliminan los productos que no se deseen o marcados por error.
