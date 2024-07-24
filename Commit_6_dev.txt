@@ -1,0 +1,1 @@
+En este commit ya están todas las entidades de backend terminadas, todos los modelos, servlets, services, interfaces, pom, context, persistence y JPA terminado. Ya está listo todo solo para empezar con el frontend.
