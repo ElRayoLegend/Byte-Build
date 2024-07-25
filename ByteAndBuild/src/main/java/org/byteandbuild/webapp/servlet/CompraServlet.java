@@ -41,7 +41,7 @@ public class CompraServlet extends HttpServlet {
         compra.forEach(p -> System.out.println(p));
         req.setAttribute("compra", compra);
         //Redirige a la pagina JSP para mostrar la lista de compras.
-        req.getRequestDispatcher("/listar-compra/listar-compra.jsp").forward(req, resp);
+        req.getRequestDispatcher("/page/listar-compra.jsp").forward(req, resp);
 
     }
 

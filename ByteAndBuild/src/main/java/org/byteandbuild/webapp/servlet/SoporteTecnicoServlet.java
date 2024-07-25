@@ -40,8 +40,8 @@ public class SoporteTecnicoServlet extends HttpServlet {
         
         soporteTecnico.forEach(p -> System.out.println(p));
         req.setAttribute("soporteTecnico", soporteTecnico);
-        //Redirige a la pÃ¡gina JSP para mostrar la lista de soporteTecnico.
-        req.getRequestDispatcher("/listar-soporteTecnico/listar-soporteTecnico.jsp").forward(req, resp);
+        //Redirige a la pagina JSP para mostrar la lista de soporteTecnico.
+        req.getRequestDispatcher("/page/ayuda/soporte-tecnico.jsp").forward(req, resp);
         
     }
 
