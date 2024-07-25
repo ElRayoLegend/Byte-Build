@@ -56,22 +56,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <%
-                    // Suponiendo que tienes una lista de tickets en un atributo de solicitud llamado "tickets"
-                    List<SoporteTecnico> problemas = (List<SoporteTecnico>) request.getAttribute("tickets");
-                    if (problemas != null) {
-                        for (SoporteTecnico problema : problemas) {
-                %>
-                <tr class="shadow-sm rounded">
-                    <td><%= problema.getNumeroTelefono() %></td>
-                    <td><%= problema.getCorreoElectronico() %></td>
-                    <td><%= problema.getDescripcionProblema() %></td>
-                    <td><%= problema.getFechaProblema() %></td>
-                </tr>
-                <%
-                        }
-                    }
-                %>
+                <c:forEach var="problema" items="${problemas}">
+                    <tr class="shadow-sm rounded">
+                        <td>${problema.numeroTelefono}</td>
+                        <td>${problema.correoElectronico}</td>
+                        <td>${problema.descripcionProblema}</td>
+                        <td>${problema.fechaProblema}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>
