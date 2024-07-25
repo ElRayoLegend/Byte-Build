@@ -1,0 +1,1 @@
+El 4to commit se realizo con el fin de realizar correcciones de la clase y cambiarle atributos a la misma, haciendo asi, de poder concluir con la clase y la entidad en si de Proveedores.

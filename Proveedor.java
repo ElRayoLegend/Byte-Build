@@ -1,4 +1,4 @@
-package org.fernandotomas.webapp.model;
+package org.byteandbuild.webapp.model;
 
 // Se importan las librerias necesarias para la persistencia (JPA)
 import jakarta.persistense.Entity;
@@ -15,31 +15,35 @@ public class Proveedor implements Serializable {
     //Se declaran privados los atributos o beans necesarios para la clase
     private int proveedorId;
     private String nombre;
-    private String descripcion;
-    private double precio;
-    private int stock;
+    private String direccion;
+    private String telefono;
+    private String correo;
 
     //Se crea el constructor vacío
     public Proveedor() {
     }
 
     // Se crea el constructor lleno
-    public Proveedor(int proveedorId, String nombre, String descripcion, double precio, int stock) {
-    this.proveedorId = proveedorId;
-    this.nombre = nombre;
-    this.descripcion = descripcion;
-    this.precio = precio;
-    this.stock = stock;}
 
-    //Se crea un constructor sin el identificador
-    public Proveedor(String nombre, String descripcion, double precio, int stock) {
+    public Proveedor(int proveedorId, String nombre, String direccion, String telefono, String correo) {
+        this.proveedorId = proveedorId;
         this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.stock = stock;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.correo = correo;
     }
+    
+    //Se crea un constructor sin el identificador
 
+    public Proveedor(String nombre, String direccion, String telefono, String correo) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.correo = correo;
+    }
+    
     //Se realizan los getters y setters de todos los atributos privados instanciados anteriormente
+
     public int getProveedorId() {
         return proveedorId;
     }
@@ -56,34 +60,35 @@ public class Proveedor implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public int getStock() {
-        return stock;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
+    
 
     // Se emplea la sobreescritura para la facilidad de lectura de datos
     @Override
     public String getToString() {
-        return "Proveedores{" + "proveedor Id: "+proveedorId+" nombre: "+nombre+" descripcion: "+descripcion+" precio: "+precio+" stock: "+stock+'}';
+        return "Proveedores{" + "proveedor Id: "+proveedorId+" nombre: "+nombre+" direccion: "+direccion+" telefono: "+telefono+" correo: "+correo+'}';
     }
 
 }
