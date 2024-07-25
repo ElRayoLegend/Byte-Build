@@ -76,7 +76,6 @@
                 <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
                 <a class="nav-link" href="page/listar-producto.jsp">Tienda</a>
                 <a class="nav-link" href="page/ayuda/soporte-tecnico.jsp">Soporte Técnico</a>
-                <a class="nav-link" href="page/listar-producto.jsp">Producto</a>
             </div>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="page/tienda/carro.jsp">

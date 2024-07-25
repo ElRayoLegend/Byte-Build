@@ -1,0 +1,2 @@
+Modifique el menu Productos, el menu Productos lo elimine de la barra de navegación, 
+ahora el listar y agregar producto se encuentra en Tienda de la barra de navegación.
