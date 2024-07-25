@@ -63,7 +63,7 @@
 </head>
 <body>
 <!--Barra de Navegación-->
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bs-">
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand">
             <img src="assets/brand/logo-long.svg" alt="Logo" width="168" height="20" class="d-inline-block align-text-center">

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html data-bs-theme="dark">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,7 +30,7 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/page/ayuda/soporte-tecnico.jsp">Soporte Técnico</a>
             </div>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/page/tienda/carro.jsp">
+                <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/carrito-servlet">
                     <i class="bi-cart"></i>
                 </a>
                 <a class="nav-link" href="${pageContext.request.contextPath}/page/listar-cliente.jsp">
@@ -89,66 +90,28 @@
               </tr>
             </thead>
             <tbody>
+                <c:forEach var="producto" items="${carrito}" >
                 <tr>
-                <th scope="row">1</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-dash-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="bi bi-trash2-fill"></i>
-                        </button>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-dash-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="bi bi-trash2-fill"></i>
-                        </button>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-custom-blue">
-                            <i class="bi bi-dash-circle"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="bi bi-trash2-fill"></i>
-                        </button>
-                    </div>
-                </td>
-              </tr>
+                    <th scope="row">${producto.carritoId}</th>
+                    <td>${producto.nombreProducto}</td>
+                    <td>${producto.cantidad}</td>
+                    <td>${producto.precioProducto}</td>
+                    <td>${producto.total}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-custom-blue">
+                                <i class="bi bi-plus-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-custom-blue">
+                                <i class="bi bi-dash-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                                <i class="bi bi-trash2-fill"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </c:forEach>
               <tr>
                 <th class="text-center h3">TOTAL</th>
                 <td></td>
@@ -156,6 +119,9 @@
                 <td></td>
                 <td></td>
                 <th class="text-center h3">Q 600.00</th>
+              </tr>
+              <tr>
+                
               </tr>
             </tbody>
         </table>

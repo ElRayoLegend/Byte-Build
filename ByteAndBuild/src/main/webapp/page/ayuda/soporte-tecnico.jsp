@@ -40,8 +40,34 @@
     </div>
 </nav>
 
-<!--Tu Contenido Va Aquí-->
-<h1>Algo</h1>
+<!--Tu Contenido Va Aqu-->
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm rounded">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Crear Ticket de Soporte Técnico</h2>
+                    <form action="${pageContext.request.contextPath}/soporteTecnico-servlet" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción del Problema" rows="3" required></textarea>
+                            <label for="descripcion">Descripción del Problema</label>
+                        </div>
+                        <input type="hidden" name="fecha" value="<%= new java.util.Date() %>">
+                        <button type="submit" class="btn btn-primary">Crear Ticket</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

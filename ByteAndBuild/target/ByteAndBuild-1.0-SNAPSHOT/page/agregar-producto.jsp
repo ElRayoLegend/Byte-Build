@@ -42,7 +42,61 @@
 
 <!--Tu Contenido Va Aquí-->
 
-
+    <style>
+        /* Estilos personalizados para la tarjeta */
+        .card-custom {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        /* Efecto de hover en la tarjeta */
+        .card-custom:hover {
+            transform: scale(1.05);
+        }
+        /* Estilos personalizados para el botón */
+        .btn-custom {
+            background-color: #ff5722;
+            color: white;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+        /* Efecto de hover en el botón */
+        .btn-custom:hover {
+            background-color: #e64a19;
+        }
+    </style>
+    
+    <!-- Contenedor principal -->
+    <div class="container mt-5">
+        <!-- Tarjeta personalizada -->
+        <div class="card card-custom p-4">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Agregar Producto</h3>
+                <!-- Formulario de productos -->
+                <form action="${pageContext.request.contextPath}/producto-servlet" method="post">
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombreProducto" name="nombreProducto" placeholder="Ingrese el nombre del producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese la marca del producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionProducto" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3" placeholder="Ingrese una descripción del producto" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precioProducto" class="form-label">Precio</label>
+                        <input type="number" step="0.01" class="form-control" id="precioProducto" name="precioProducto" placeholder="Ingrese el precio del producto" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-custom">Agregar Producto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 <!--Script pa' que se vea bonito UwU-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
