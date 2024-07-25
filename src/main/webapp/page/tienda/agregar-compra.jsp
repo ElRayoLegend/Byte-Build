@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras - BYTE & Build</title>
+    <title>Agregar Compra - BYTE & Build</title>
     <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/assets/brand/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -42,64 +42,50 @@
 
 <!-- Estilos personalizados -->
 <style>
-    /* Estilos personalizados para la tabla */
-    .table-custom {
-        background-color: #C0392B;
+    /* Estilos personalizados para el formulario */
+    .form-container {
+        margin-top: 80px;
+        background-color: #2C3E50;
+        padding: 20px;
+        border-radius: 5px;
+        color: #ECF0F1;
     }
-    /* Estilos personalizados para las celdas de la tabla */
-    .table-custom th, .table-custom td {
-        text-align: center;
-    }
-    /* Estilo para el encabezado de la tabla */
-    .table-custom thead th {
-        background-color: #C0392B;
-        color: black;
-    }
-    /* Estilos para el botón */
-    .btn-add {
+    .btn-submit {
         background-color: #E74C3C;
-        color: black;
-        border-radius: 0; /* Hacer que el botón sea rectangular */
+        color: white;
+        border-radius: 0;
         transition: background-color 0.10s;
     }
-    .btn-add:hover {
+    .btn-submit:hover {
         background-color: #F1948A;
-    }
-    /* Estilos para el contenedor del botón */
-    .btn-container {
-        text-align: right;
-        margin-bottom: 20px;
     }
 </style>
 
 <!-- Contenedor principal -->
-<div class="container mt-5">
-    <!-- Contenedor del botón -->
-    <div class="btn-container">
-        <a class="btn btn-add" href="agregar-compra.jsp">Agregar Compra</a>
+<div class="container">
+    <div class="form-container">
+        <h2>Agregar Compra</h2>
+        <!-- Formulario para agregar compra -->
+        <form action="guardar-compra.jsp" method="post">
+            <div class="mb-3">
+                <label for="id_compra" class="form-label">ID Compra</label>
+                <input type="text" class="form-control" id="id_compra" name="id_compra" required>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+            </div>
+            <div class="mb-3">
+                <label for="fecha_compra" class="form-label">Fecha de Compra</label>
+                <input type="date" class="form-control" id="fecha_compra" name="fecha_compra" required>
+            </div>
+            <div class="mb-3">
+                <label for="total" class="form-label">Total</label>
+                <input type="number" class="form-control" id="total" name="total" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-submit">Guardar Compra</button>
+        </form>
     </div>
-    <!-- Tabla personalizada -->
-    <table class="table table-custom">
-        <thead>
-            <tr>
-                <th scope="col">ID Compra</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Fecha de Compra</th>
-                <th scope="col">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Bucle para iterar sobre las compras y mostrar cada una en una fila -->
-            <c:forEach var="compra" items="${compras}">
-                <tr>
-                    <td>${compra.id_compra}</td>
-                    <td>${compra.descripcion}</td>
-                    <td>${compra.fecha_compra}</td>
-                    <td>${compra.total}</td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
 </div>
 
 <!--Script para Bootstrap-->
