@@ -55,10 +55,6 @@
             backdrop-filter: blur(5px); /* Add blur effect here */
             z-index: -1;
         }
-        .content {
-            position: relative;
-            z-index: 2;
-        }
     </style>
 </head>
 <body>
