@@ -1,0 +1,37 @@
+Commit 2 
+
+Empezamos a hacer la logica de agregar clientes.
+
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm rounded">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Agregar Clientes</h2>
+                    <form action="${pageContext.request.contextPath}/cliente-servlett/" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" required>
+                            <label for="direccion">Dirección</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
+                            <label for="correo">Correo</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+Aca creamos los contenedores donde vamos a insertar la informacion de los clientes, usando como ID los nombres
+de el servlet clientes-servlet terminando asi la vista de Agregar Clientes
