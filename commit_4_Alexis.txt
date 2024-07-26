@@ -1,0 +1,37 @@
+commit 4 
+
+Luego de definir el titulo y demas, empezamos a programar la vista y la logica 
+
+<div class="container mt-5 pt-5">
+    <div class="card shadow-lg rounded">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="m-0">Listado de Clientes</h2>
+            <a href="${pageContext.request.contextPath}/page/agregar-cliente.jsp" class="btn btn-primary"><i class="bi-plus-lg"></i> Agregar Cliente</a>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                <%
+                    List<Clientes> Cliente = (List<Clientes>) request.getAttribute("Clientes");
+                    if (Cliente != null) {
+                        for (Clientes Cliente : Clientes) {
+                %>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center mb-2 shadow-sm rounded">
+                    <div>
+                        <h5 class="mb-1"><%= Cliente.getNombre() %></h5>
+                        <p class="mb-1">Dirección: <%= Cliente.getDireccion() %></p>
+                        <small>Teléfono: <%= Cliente.getTelefono() %></small><br>
+                        <small>Correo: <%= Cliente.getCorreo() %></small>
+                    </div>
+                    <i class="bi-chevron-right"></i>
+                </a>
+                <%
+                        }
+                    }
+                %>
+            </div>
+        </div>
+    </div>
+</div>
+
+En este codigo definimos varios contenedores, definimos un boton que redirige a otra pagina, creamos una lista desde
+un atributo HTTP y verificamos si la lista no es nula
