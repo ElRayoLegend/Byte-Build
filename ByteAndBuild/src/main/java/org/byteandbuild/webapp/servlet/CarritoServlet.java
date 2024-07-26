@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import org.byteandbuild.webapp.model.Carrito;
 import org.byteandbuild.webapp.model.Factura;
 import org.byteandbuild.webapp.service.CarritoService;
@@ -41,9 +42,13 @@ public class CarritoServlet extends HttpServlet {
 
         // Esto manda a llamar la lista carrito
         List<Carrito> carrito = carritoService.listarCarrito();
-
+        double total = 0;
         carrito.forEach(p -> System.out.println(p));
+        for (Carrito item: carrito) {
+            total = total + item.getTotal();
+        }
         req.setAttribute("carrito", carrito);
+        req.setAttribute("total", total);
         // Dirige a jsp para mostrar la lista carrito de compras
         req.getRequestDispatcher("/page/tienda/carro.jsp").forward(req, resp);
 
@@ -89,7 +94,17 @@ public class CarritoServlet extends HttpServlet {
         String pathInfo = req.getPathInfo();
 
         if (pathInfo == null || pathInfo.equals("/")) {
-            crearCarrito(req, resp);
+            String tipo = req.getParameter("tipo");
+            
+            if(tipo.equals("Eliminar")) {
+                eliminarCarrito(req, resp);
+            } else if(tipo.equals("Agregar")) {
+                crearCarrito(req, resp);
+            } else if(tipo.equals("Incrementar")) {
+                incrementarCarrito(req, resp);
+            } else if(tipo.equals("Decrementar")) {
+                decrementarCarrito(req, resp);
+            }
         } else if (pathInfo.equals("/finalizar-compra")) {
             finalizarCompra(req, resp);
         } else {
@@ -185,14 +200,15 @@ public class CarritoServlet extends HttpServlet {
         }
     }
 
-    private void eliminarCarrito(int carritoId, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void eliminarCarrito(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Se utiliza el servicio carritoService para buscar la entidad Carrito con el ID proporcionado (carritoId).
+        int carritoId = Integer.parseInt(req.getParameter("carritoId"));
         Carrito carrito = carritoService.buscarCarrito(carritoId);
         //Si la entidad Carrito no es nula (es decir, se encontrara en la base de datos), se procede a eliminarla.
         if (carrito != null) {
             carritoService.eliminarCarrito(carritoId);
             // Se envia al cliente la nueva URL, Cuando se llama a este metodo, se envi­a una respuesta HTTP al cliente
-            resp.sendRedirect(req.getContextPath() + "/carrito/");
+            resp.sendRedirect(req.getContextPath() + "/");
         } else {
             //Si el carrito de compras no se encuentra, se envi­a un error 404 (Not Found) al cliente.
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
@@ -202,26 +218,65 @@ public class CarritoServlet extends HttpServlet {
     @Override
     //manejar las solicitudes HTTP delete.
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //Obtiene informacion de la URL
         String pathInfo = req.getPathInfo();
 
-        //Si la URL es diferente a null y contiene "/" entrara a la funcionalidad de eliminar
         if (pathInfo != null && !pathInfo.equals("/")) {
-            //Divide pathInfo en partes con el metodo split utilizando como separador "/"
             String[] pathParts = pathInfo.split("/");
-            // Si pathParts es igual a 2 elementos procede a eliminar
             if (pathParts.length == 2) {
-                //Parsea pathParts a tipo Int debido a que pathParts es String
                 int carritoId = Integer.parseInt(pathParts[1]);
-                // procede a eliminar con los parametros requeridos como el id el pedido y la respuesta
-                eliminarCarrito(carritoId, req, resp);
+                //eliminarProducto(productoId, req, resp);
             } else {
-                //Si pathParts no tiene exactamente dos elementos, envi­a una respuesta de error HTTP 400 (Bad Request)
                 resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
             }
         } else {
-            //Si pathInfo es nulo o igual a /, envÃ­a una respuesta de error HTTP 400 (Bad Request) al cliente.
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+    }
+    
+    
+    private void incrementarCarrito(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Colocamos el servicio de carrito con la funcion de buscarCarrito
+        int carritoId = Integer.parseInt(req.getParameter("carritoId"));
+        Carrito carrito = carritoService.buscarCarrito(carritoId);
+        /* Si este recurso de carrito es diferente a nulo procede a 
+        actualiza sus atributos con los valores proporcionados en la
+        solicitud y persiste los cambios en la base de datos. Si la entidad 
+        no se encuentra, responde con un error 404 (No Encontrado).*/
+
+        if (carrito != null) {
+
+            carrito.setCantidad(carrito.getCantidad() + 1);
+            carrito.setTotal(carrito.getCantidad() * carrito.getPrecioProducto());
+            carritoService.editarCarrito(carrito);
+
+            resp.sendRedirect(req.getContextPath() + "/");
+        } else {
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+        }
+    }
+    
+    private void decrementarCarrito(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Colocamos el servicio de carrito con la funcion de buscarCarrito
+        int carritoId = Integer.parseInt(req.getParameter("carritoId"));
+        Carrito carrito = carritoService.buscarCarrito(carritoId);
+        /* Si este recurso de carrito es diferente a nulo procede a 
+        actualiza sus atributos con los valores proporcionados en la
+        solicitud y persiste los cambios en la base de datos. Si la entidad 
+        no se encuentra, responde con un error 404 (No Encontrado).*/
+
+        if (carrito != null) {
+            if (carrito.getCantidad() > 0){
+                
+            carrito.setCantidad(carrito.getCantidad() - 1); 
+            carrito.setTotal(carrito.getCantidad() * carrito.getPrecioProducto());
+            carritoService.editarCarrito(carrito);
+
+            resp.sendRedirect(req.getContextPath() + "/");
+            } else {
+                carrito.setCantidad(0);
+            }
+        } else {
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
     }
 }

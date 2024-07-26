@@ -1,0 +1,1 @@
+En este commit lo que hice fue cambiar la funcionalidad de los botones de incrementar y decrementar, total

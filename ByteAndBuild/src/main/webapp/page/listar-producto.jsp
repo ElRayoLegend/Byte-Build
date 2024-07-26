@@ -33,7 +33,7 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/page/tienda/carro.jsp">
                     <i class="bi-cart"></i>
                 </a>
-                <a class="nav-link" href="${pageContext.request.contextPath}/page/listar-cliente.jsp">
+                <a class="nav-link" href="${pageContext.request.contextPath}/producto-servlet">
                     <i class="bi-person-circle"></i>
                 </a>
             </div>
@@ -95,6 +95,7 @@
                             <input hidden="true" id="nombreProducto" name="nombreProducto" value="${producto.nombreProducto}">
                             <input hidden="true" id="precioProducto" name="precioProducto" value="${producto.precioProducto}">
                             <input hidden="true" id="cantidad" name="cantidad" value="1">
+                            <input hidden="true" id="tipo" name="tipo" value="Agregar">
                             <button type="submit" class="btn btn-primary">
                                 <i class="bi bi-cart"></i>
                                 Añadir al carrito

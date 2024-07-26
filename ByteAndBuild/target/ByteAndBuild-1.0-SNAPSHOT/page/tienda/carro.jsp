@@ -33,7 +33,7 @@
                 <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/carrito-servlet">
                     <i class="bi-cart"></i>
                 </a>
-                <a class="nav-link" href="${pageContext.request.contextPath}/page/listar-cliente.jsp">
+                <a class="nav-link" href="${pageContext.request.contextPath}/page/listar-producto.jsp">
                     <i class="bi-person-circle"></i>
                 </a>
             </div>
@@ -99,15 +99,27 @@
                     <td>${producto.total}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-custom-blue">
-                                <i class="bi bi-plus-circle"></i>
-                            </button>
-                            <button type="button" class="btn btn-custom-blue">
-                                <i class="bi bi-dash-circle"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                                <i class="bi bi-trash2-fill"></i>
-                            </button>
+                            <form style="margin-bottom: 0px; padding: 0px;" class="btn btn-custom-blue" action="${pageContext.request.contextPath}/carrito-servlet" method="POST">
+                                <input hidden="true" id="carritoId" name="carritoId" value="${producto.carritoId}">
+                                <input hidden="true" id="tipo" name="tipo" value="Incrementar">
+                                <button type="submit" class="btn btn-custom-blue">
+                                    <i class="bi bi-plus-circle"></i>
+                                </button>
+                            </form>
+                            <form style="margin-bottom: 0px; padding: 0px;" class="btn btn-custom-blue" action="${pageContext.request.contextPath}/carrito-servlet" method="POST">
+                                <input hidden="true" id="carritoId" name="carritoId" value="${producto.carritoId}">
+                                <input hidden="true" id="tipo" name="tipo" value="Decrementar">
+                                <button type="submit" class="btn btn-custom-blue">
+                                    <i class="bi bi-dash-circle"></i>
+                                </button>
+                            </form>
+                            <form style="margin-bottom: 0px; padding: 0px;" class="btn btn-danger" action="${pageContext.request.contextPath}/carrito-servlet" method="POST">
+                                <input hidden="true" id="tipo" name="tipo" value="Eliminar">
+                                <input hidden="true" id="carritoId" name="carritoId" value="${producto.carritoId}">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi bi-trash2-fill"></i>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>
@@ -118,7 +130,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <th class="text-center h3">Q 600.00</th>
+                <th class="text-center h3">Q ${total}</th>
               </tr>
               <tr>
                 
