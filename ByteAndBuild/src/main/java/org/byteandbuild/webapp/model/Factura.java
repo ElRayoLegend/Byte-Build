@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Factura {
@@ -19,23 +20,16 @@ public class Factura {
     
     // Creamos las variables con su respectiva encapsulacion.
     private int facturaId;
-    private int compraId;
     private String fechaFactura;
+    private String descripcion;
     private double monto;
 
     public Factura() {
     }
 
-    public Factura(int facturaId, int compraId, String fechaFactura, double monto) {
-        this.facturaId = facturaId;
-        this.compraId = compraId;
+    public Factura(String fechaFactura, String descripcion, double monto) {
         this.fechaFactura = fechaFactura;
-        this.monto = monto;
-    }
-
-    public Factura(int compraId, String fechaFactura, double monto) {
-        this.compraId = compraId;
-        this.fechaFactura = fechaFactura;
+        this.descripcion = descripcion;
         this.monto = monto;
     }
 
@@ -47,12 +41,12 @@ public class Factura {
         this.facturaId = facturaId;
     }
 
-    public int getCompraId() {
-        return compraId;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setCompraId(int compraId) {
-        this.compraId = compraId;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getFechaFactura() {
@@ -73,7 +67,7 @@ public class Factura {
 
     @Override
     public String toString() {
-        return "Factura{" + "facturaId=" + facturaId + ", compraId=" + compraId + ", fechaFactura=" + fechaFactura + ", monto=" + monto + '}';
+        return "Factura{" + "facturaId=" + facturaId + ", descripcion=" + descripcion + ", fechaFactura=" + fechaFactura + ", monto=" + monto + '}';
     }
     
 }

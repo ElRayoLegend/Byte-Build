@@ -30,7 +30,7 @@ public class ProveedorServlet extends HttpServlet {
         List<Proveedor> proveedores = proveedorService.listarProveedores();
         proveedores.forEach(p -> System.out.println(p));
         req.setAttribute("proveedores", proveedores);
-        req.getRequestDispatcher("/lista-proveedor/lista-producto.jsp").forward(req, resp);
+        req.getRequestDispatcher("/page/listar-proveedor.jsp").forward(req, resp);
     }
 
     // Se crea la clase para ingresar los datos y generar las transacciones
@@ -43,7 +43,7 @@ public class ProveedorServlet extends HttpServlet {
         Proveedor proveedor = new Proveedor(nombre, direccion, telefono, correo);
         proveedorService.crearProveedor(proveedor);
 
-        response.sendRedirect(request.getContextPath() + "/");
+        response.sendRedirect(request.getContextPath() + "/proveedor-servlet");
     }
 
     // Con esta clase se realiza la accion crearProveedor y registrarlos en los comandos https

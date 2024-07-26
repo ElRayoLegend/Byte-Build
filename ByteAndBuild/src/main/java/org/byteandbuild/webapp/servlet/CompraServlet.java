@@ -25,7 +25,7 @@ public class CompraServlet extends HttpServlet {
     private CompraService compraService;
 
     public void init() throws ServletException {
-        //Este mÃ©todo se llama cuando el servlet se inicializa.
+        //Este metodo se llama cuando el servlet se inicializa.
         super.init();
         this.compraService = new CompraService();
 
@@ -40,8 +40,8 @@ public class CompraServlet extends HttpServlet {
 
         compra.forEach(p -> System.out.println(p));
         req.setAttribute("compra", compra);
-        //Redirige a la pÃ¡gina JSP para mostrar la lista de compras.
-        req.getRequestDispatcher("/listar-compra/listar-compra.jsp").forward(req, resp);
+        //Redirige a la pagina JSP para mostrar la lista de compras.
+        req.getRequestDispatcher("/page/listar-compra.jsp").forward(req, resp);
 
     }
 
@@ -57,7 +57,7 @@ public class CompraServlet extends HttpServlet {
         // creamos la compra
         compraService.crearCompra(compra);
 
-        resp.sendRedirect(req.getContextPath() + "/");
+        resp.sendRedirect(req.getContextPath() + "/compra-servlet");
     }
 
     @Override

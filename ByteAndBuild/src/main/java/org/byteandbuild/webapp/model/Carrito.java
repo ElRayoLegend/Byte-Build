@@ -3,10 +3,12 @@
  */
 package org.byteandbuild.webapp.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Carrito {
 
     // @Id se utiliza como un identificador
@@ -36,7 +38,8 @@ public class Carrito {
     }
     
     // Getters and Setter
-    public int getCarritoId() {    
+
+    public int getCarritoId() {
         return carritoId;
     }
 
@@ -71,16 +74,19 @@ public class Carrito {
     public double getTotal() {
         return total;
     }
-    
-    public void setTotal(double total) {    
+
+    public void setTotal(double total) {
         this.total = total;
     }
+    
 
     // Concatenar los atributos del carrito de compras
+
     @Override
     public String toString() {
         return "Carrito{" + "carritoId=" + carritoId + ", cantidad=" + cantidad + ", nombreProducto=" + nombreProducto + ", precioProducto=" + precioProducto + ", total=" + total + '}';
     }
+    
     
 
 }

@@ -31,7 +31,7 @@ public class ProductoServlet extends HttpServlet {
         List<Producto> productos = productoService.listarProductos();
         productos.forEach(p -> System.out.println(p));
         req.setAttribute("productos", productos);
-        req.getRequestDispatcher("/lista-producto/lista-producto.jsp").forward(req, resp);
+        req.getRequestDispatcher("/page/listar-producto.jsp").forward(req, resp);
     }
     
     private void crearProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -43,7 +43,7 @@ public class ProductoServlet extends HttpServlet {
         Producto producto = new Producto(nombre, marca, descripcion, precio);
         productoService.crearProducto(producto);
 
-        response.sendRedirect(request.getContextPath() + "/");
+        response.sendRedirect(request.getContextPath() + "/producto-servlet");
     }
 
     @Override

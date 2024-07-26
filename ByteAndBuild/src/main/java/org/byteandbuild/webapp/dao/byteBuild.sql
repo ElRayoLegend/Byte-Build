@@ -1,6 +1,6 @@
 -- Configuración inicial
-ALTER USER '2023370_IN5BV'@'localhost' IDENTIFIED WITH mysql_native_password BY 'abc123!!';
-SET GLOBAL time_zone = '-6:00';
+-- ALTER USER '2023370_IN5BV'@'localhost' IDENTIFIED WITH mysql_native_password BY 'abc123!!';
+-- SET GLOBAL time_zone = '-6:00';
 
 -- Información del proyecto
 /*
@@ -13,10 +13,9 @@ SET GLOBAL time_zone = '-6:00';
 */
 
 -- Eliminar la base de datos si existe
-DROP DATABASE IF EXISTS byteBuild;
 
 -- Crear la base de datos
-CREATE DATABASE byteBuild;
+CREATE DATABASE IF NOT EXISTS byteBuild;
 USE byteBuild;
 
 -- Crear las tablas
@@ -66,7 +65,7 @@ CREATE TABLE SoporteTecnico (
     soporteId INT NOT NULL AUTO_INCREMENT,
     numeroTelefono VARCHAR(15) NOT NULL,
     correoElectronico VARCHAR(100) NOT NULL,
-    descripcionProblema TEXT NOT NULL,
+    descripcionProblema VARCHAR(150) NOT NULL,
     fechaProblema DATE,
     PRIMARY KEY (soporteId)
 );
@@ -83,7 +82,7 @@ CREATE TABLE Compra (
 -- Tabla Factura
 CREATE TABLE Factura (
     facturaId INT NOT NULL AUTO_INCREMENT,
-    compraId INT NOT NULL,
+    descripcion VARCHAR(100) NOT NULL,
     fechaFactura DATE NOT NULL,
     monto DECIMAL(10,2) NOT NULL,
     PRIMARY KEY (facturaId)
@@ -140,8 +139,10 @@ INSERT INTO Compra (descripcion, fechaCompra, total) VALUES
 ('Compra 5', '2024-07-05', 300.00);
 
 -- Datos en la tabla Factura
-INSERT INTO Factura (compraId, fechaFactura, monto) VALUES
-(1, '2024-07-01', 100.00),
-(2, '2024-07-02', 200.00),
-(3, '2024-07-03', 150.00),
-(4, '2024-07-04', 250.00);
+INSERT INTO Factura (descripcion, fechaFactura, monto) VALUES
+('4090', '2024-07-01', 100.00),
+('4090', '2024-07-02', 200.00),
+('4090', '2024-07-03', 150.00),
+('4090', '2024-07-04', 250.00);
+
+select * from cliente

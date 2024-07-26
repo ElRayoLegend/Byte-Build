@@ -35,12 +35,12 @@ public class ClienteServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         //Creamos una lista de Clientes, que va a llamar a la lista de clientes en la clase ClienteService
-        List<Cliente> compra = clienteService.listarCliente();
+        List<Cliente> cliente = clienteService.listarCliente();
 
-        compra.forEach(p -> System.out.println(p));
-        req.setAttribute("compra", compra);
+        cliente.forEach(p -> System.out.println(p));
+        req.setAttribute("Clientes", cliente);
         //Redirige al JSP para mostrar la lista de clientes
-        req.getRequestDispatcher("/listar-cliente/listar-cliente.jsp").forward(req, resp);
+        req.getRequestDispatcher("/page/listar-cliente.jsp").forward(req, resp);
     }
     
     private void crearCliente(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -55,7 +55,7 @@ public class ClienteServlet extends HttpServlet{
         // creamos el cliente
         clienteService.crearCliente(cliente);
 
-        resp.sendRedirect(req.getContextPath() + "/");
+        resp.sendRedirect(req.getContextPath() + "/cliente-servlet");
     }
     
     @Override
@@ -151,9 +151,9 @@ public class ClienteServlet extends HttpServlet{
             // Si pathParts es igual a 2 procede a eliminar
             if (pathParts.length == 2) {
                 //se convierte pathParts a int
-                int compraId = Integer.parseInt(pathParts[1]);
+                int clienteId = Integer.parseInt(pathParts[1]);
                 // se elimina mandando los parametros al método eliminarCliente
-                eliminarCliente(compraId, req, resp);
+                eliminarCliente(clienteId, req, resp);
             } else {
                 //Si pathParts no tiene exactamente dos elementos, envía una respuesta de error HTTP 400 (Bad Request)
                 resp.sendError(HttpServletResponse.SC_BAD_REQUEST);

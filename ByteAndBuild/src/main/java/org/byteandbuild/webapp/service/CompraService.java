@@ -60,6 +60,7 @@ public class CompraService implements ICompraService {
     public void editarCompra(Compra compra) {
         // merge nos sirve para actualizar compra
         em.merge(compra);
+        
     }
 
     @Override

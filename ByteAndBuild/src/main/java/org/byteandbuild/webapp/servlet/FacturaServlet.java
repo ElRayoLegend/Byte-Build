@@ -18,7 +18,7 @@ import org.byteandbuild.webapp.service.FacturaService;
 @WebServlet(name = "FacturaServlet", urlPatterns = {"/factura-servlet"})
 @MultipartConfig
 
-// Se declara la clase carritoservlet
+// Se declara la clase facturaservlet
 public class FacturaServlet extends HttpServlet {
     // Creamos variable con su respectiva encapsulacion.
     private FacturaService facturaService;
@@ -40,24 +40,24 @@ public class FacturaServlet extends HttpServlet {
         factura.forEach(p -> System.out.println(p));
         req.setAttribute("factura", factura);
         // Dirige a jsp para mostrar la lista factura de compras
-        req.getRequestDispatcher("/listar-factura/listar-factura.jsp").forward(req, resp);
+        req.getRequestDispatcher("/page/listar-factura.jsp").forward(req, resp);
 
     }
 
     private void crearFactura(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         // Con los parametros de HttpServletRequest declaramos en la db
-        int compraId = Integer.parseInt(req.getParameter("compraId"));
+        String descripcion = req.getParameter("descripcion");
         String fechaFactura = req.getParameter("fechaFactura");
         double monto = Double.parseDouble(req.getParameter("monto"));
 
 
         // Se obtienen los parametros de factura
-        Factura factura = new Factura(compraId, fechaFactura, monto);
-        // Se crea el carrito de compras
+        Factura factura = new Factura(descripcion, fechaFactura, monto);
+        // Se crea la factura
         facturaService.crearFactura(factura);
 
-        resp.sendRedirect(req.getContextPath() + "/");
+        resp.sendRedirect(req.getContextPath() + "/factura-servlet");
     }
 
     @Override
@@ -87,11 +87,11 @@ public class FacturaServlet extends HttpServlet {
 
         if (factura != null) {
 
-            int compraId = Integer.parseInt(req.getParameter("compraId"));
+            String descripcion = req.getParameter("descripcion");
             String fechaFactura = req.getParameter("fechaFactura");
             double monto = Double.parseDouble(req.getParameter("monto"));
 
-            factura.setCompraId(compraId);
+            factura.setDescripcion(descripcion);
             factura.setFechaFactura(fechaFactura);
             factura.setMonto(monto);
             
@@ -131,7 +131,7 @@ public class FacturaServlet extends HttpServlet {
     }
 
     private void eliminarFactura(int facturaId, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //Se utiliza el servicio carritoService para buscar la entidad factura con el ID proporcionado (facturaId).
+        //Se utiliza el servicio facturaService para buscar la entidad factura con el ID proporcionado (facturaId).
         Factura factura = facturaService.buscarFactura(facturaId);
         //Si la entidad factura no es nula (es decir, se encontrara en la base de datos), se procede a eliminarla.
         if (factura != null) {
