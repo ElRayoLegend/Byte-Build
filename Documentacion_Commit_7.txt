@@ -1,0 +1,9 @@
+Corrección y arreglo de pequeños detalles
+Version Final de la primera parte.
+-Pom
+-Context
+-JPA
+-SoporteTecnico
+	servlets, models, service, Iservices.
+-Compra
+	servlets, models, service, Iservices.

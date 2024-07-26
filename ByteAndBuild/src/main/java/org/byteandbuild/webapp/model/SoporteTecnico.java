@@ -4,10 +4,14 @@
 package org.byteandbuild.webapp.model;
 
 // @Id se utiliza como un identificador
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+
+@Entity
 public class SoporteTecnico {
 
     @Id
@@ -85,4 +89,3 @@ public class SoporteTecnico {
     }
 
 }
-
