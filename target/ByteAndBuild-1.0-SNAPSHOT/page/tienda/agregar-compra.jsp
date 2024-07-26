@@ -53,7 +53,7 @@
     .btn-submit {
         background-color: #E74C3C;
         color: white;
-        border-radius: 0;
+        border-radius: 15;
         transition: background-color 0.10s;
     }
     .btn-submit:hover {

@@ -1,0 +1,6 @@
+
+En mi primer commit realice el Diagrama de flujo
+ 
+-Donde se incluia las endidades realizadas 
+-Los atribujos respectivos a cada entidad
+-El Diagrama de flujo se entrego en un documento pdf
