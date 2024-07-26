@@ -182,7 +182,7 @@ public class CarritoServlet extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pathInfo = req.getPathInfo();
 
-        if (pathInfo != null && !pathInfo.equals("/")) {
+        if (pathInfo != null && !pathInfo.equals("/carrito-servlet")) {
             String[] pathParts = pathInfo.split("/");
             if (pathParts.length == 2) {
                 int carritoId = Integer.parseInt(pathParts[1]);
@@ -211,7 +211,7 @@ public class CarritoServlet extends HttpServlet {
             carrito.setTotal(carrito.getCantidad() * carrito.getPrecioProducto());
             carritoService.editarCarrito(carrito);
 
-            resp.sendRedirect(req.getContextPath() + "/");
+            resp.sendRedirect(req.getContextPath() + "/carrito-servlet");
         } else {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
@@ -232,7 +232,7 @@ public class CarritoServlet extends HttpServlet {
             carrito.setTotal(carrito.getCantidad() * carrito.getPrecioProducto());
             carritoService.editarCarrito(carrito);
 
-            resp.sendRedirect(req.getContextPath() + "/");
+            resp.sendRedirect(req.getContextPath() + "/carrito-servlet");
             } else {
                 carrito.setCantidad(0);
                 carrito.setTotal(0);
