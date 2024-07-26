@@ -20,7 +20,6 @@ org\byteandbuild\webapp\model\SoporteTecnico.class
 org\byteandbuild\webapp\servlet\FacturaServlet.class
 org\byteandbuild\webapp\servlet\CompraServlet.class
 org\byteandbuild\webapp\service\FacturaService.class
-org\byteandbuild\webapp\servlet\EliminarCarrito.class
 org\byteandbuild\webapp\util\JpaUtil.class
 org\byteandbuild\webapp\model\Carrito.class
 org\byteandbuild\webapp\model\Compra.class

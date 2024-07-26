@@ -113,13 +113,6 @@
                                     <i class="bi bi-dash-circle"></i>
                                 </button>
                             </form>
-                            <form style="margin-bottom: 0px; padding: 0px;" class="btn btn-danger" action="${pageContext.request.contextPath}/carrito-servlet" method="POST">
-                                <input hidden="true" id="tipo" name="tipo" value="Eliminar">
-                                <input hidden="true" id="carritoId" name="carritoId" value="${producto.carritoId}">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="bi bi-trash2-fill"></i>
-                                </button>
-                            </form>
                         </div>
                     </td>
                 </tr>
