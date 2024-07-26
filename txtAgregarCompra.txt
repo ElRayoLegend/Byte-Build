@@ -1,0 +1,10 @@
+En mi tercer commit realice un jsp de agregar compra.
+
+Estilo personalizado 
+
+Cree un tipo formulario para agregar la compra que realizara el comprador o 
+compradora, con los atributos correspondientes a la entidad, dándole así el 
+color de la base del formulario.
+ 
+También así el botón de agregar al cual le di la forma de rectángulo con las
+puntas cursivas, el color del botón y la letra.

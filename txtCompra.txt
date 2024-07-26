@@ -1,0 +1,9 @@
+En mi segundo commit realice una vista de compra
+
+Donde implemente mi estilo personal
+
+Agregándole la barra de los atributos que conlleva la entidad compra dándole el color 
+de la tabla y el color de la letra
+
+Realicé también el botón de agregar compra al cual le di una forma de rectangular
+pero con las esquinas algo cursivas, también el color del botón y de la letra
